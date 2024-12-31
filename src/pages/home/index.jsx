@@ -4,7 +4,7 @@ import 'swiper/swiper-bundle.css';
 
 const Home = () => {
     return (
-        <div className="bg-gradient-to-r from-gray-300 to-gray-500 animate-bg-motion bg-[length:200%_200%]">
+        <div className="bg-cover bg-center" style={{ backgroundImage: "url('src/assets/gym-background.jpg')" }}>
             <div className="flex flex-col items-center justify-center h-screen text-center text-white">
                 <h1 className="text-5xl font-bold">TAYD'S GYM</h1>
                 <p className="mt-4 text-xl">Unleash Your Inner Strength!</p>
