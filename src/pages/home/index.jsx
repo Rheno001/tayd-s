@@ -1,19 +1,34 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Home = () => {
+    const { ref: ref10, inView: inView10 } = useInView({
+        triggerOnce: false,
+        threshold: 0.5,
+    });
     return (
         <div className="relative bg-cover bg-center" style={{ backgroundImage: "url('src/assets/gym-background.jpg')" }}>
-            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-50 p-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-50"></div>
             <div className="flex flex-col items-center justify-center h-screen text-center text-white">
-                <h1 className="text-5xl font-bold">TAYD'S GYM</h1>
-                <p className="mt-4 text-xl">Unleash Your Inner Strength!</p>
+            <div><motion.div ref={ref10}
+                    initial={{ opacity: 0, y: -200 }}
+                    animate={{
+                        opacity: inView10 ? 1 : 0,
+                        y: inView10 ? 0 : -200,
+                    }}
+                    transition={{ duration: 0.5 }} className='flex flex-col items-center'>
+                    <h1 className='text-8xl font-bold relative'>TAYD'S GYM</h1>
+                </motion.div>
+                </div>
+                <p className="mt-4 text-xl relative">Unleash Your Inner Strength!</p>
                 <div className="mt-6">
                     <input
                         type="text"
                         placeholder="Search for locations..."
-                        className="p-2 rounded-lg border border-gray-300"
+                        className="p-2 bg-white rounded-lg border border-gray-300 relative"
                     />
                 </div>
             </div>

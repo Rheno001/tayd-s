@@ -8,7 +8,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gradient-to-r from-gray-700 to-gray-900 shadow rounded-md">
+        <nav className="bg-gradient-to-r from-gray-700 to-gray-900 shadow">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <div className="text-xl font-bold text-white">TAYD'S</div>
