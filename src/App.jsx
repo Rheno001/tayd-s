@@ -8,7 +8,7 @@ import Footer from './components/Footer.jsx'
 function App() {
 
   return (
-    <div>
+    <div className='p-[0px]'>
       <Navbar/>
       <Home/>
       <Footer/>
