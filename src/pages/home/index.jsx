@@ -3,8 +3,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import Slider from '../../components/slider.jsx';
 
 const Home = () => {
+    const { ref: ref9, inView: inView9 } = useInView({
+        triggerOnce: false,
+        threshold: 0.5,
+    });
     const { ref: ref10, inView: inView10 } = useInView({
         triggerOnce: false,
         threshold: 0.5,
@@ -12,7 +17,7 @@ const Home = () => {
     return (
         <div className="relative bg-cover bg-center" style={{ backgroundImage: "url('src/assets/gym-background.jpg')" }}>
             <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-50"></div>
-            <div className="flex flex-col items-center justify-center h-screen text-center text-white">
+          <div className="flex flex-col items-center justify-center h-screen text-center text-white">
             <div><motion.div ref={ref10}
                     initial={{ opacity: 0, y: -200 }}
                     animate={{
@@ -22,26 +27,32 @@ const Home = () => {
                     transition={{ duration: 0.5 }} className='flex flex-col items-center'>
                     <h1 className='text-8xl font-bold relative'>TAYD'S GYM</h1>
                 </motion.div>
-                </div>
-                <p className="mt-4 text-xl relative">Unleash Your Inner Strength!</p>
+            </div>
+                <motion.div ref={ref9}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{
+                        opacity: inView9 ? 1 : 0,
+                        x: inView9 ? 0 : 100,
+                    }}
+                    transition={{ duration: 0.5 }} className='flex flex-col items-start'>
+                   <p className="mt-4 text-2xl font-semibold relative">Unleash Your Inner Strength!</p>
+                </motion.div>
+
                 <div className="mt-6">
                     <input
                         type="text"
                         placeholder="Search for locations..."
-                        className="p-2 bg-white rounded-lg border border-gray-300 relative"
+                        className="p-2 text-center bg-white rounded-lg border border-gray-300 relative"
                     />
                 </div>
-            </div>
+          </div>
 
             <section className="py-16 bg-white text-gray-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-bold">Why Join TAYD'S?</h2>
-                    <ul className="mt-6 space-y-4">
-                        <li>✅ Access to top-notch equipment</li>
-                        <li>✅ Personalized training plans</li>
-                        <li>✅ Community support and motivation</li>
-                        <li>✅ Flexible membership options</li>
-                    </ul>
+                    <div className='lg:pt-[70px]'>
+                         <Slider />
+                    </div>
                 </div>
             </section>
 
