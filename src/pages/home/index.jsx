@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import Slider from '../../components/slider.jsx';
+import Slider from '../../components/slider';
+
 
 const Home = () => {
     const { ref: ref9, inView: inView9 } = useInView({
