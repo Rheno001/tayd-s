@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'; // Importing
 
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-r from-gray-700 to-gray-900 text-white py-8">
+        <footer className=" text-white py-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
                 <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-2xl">
                     {/* Left Navigation Links */}
