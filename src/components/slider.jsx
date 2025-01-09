@@ -1,6 +1,6 @@
 const Slider = () => {
     return (
-        <div className="overflow-hidden py-[5px]">
+        <div className="overflow-hidden py-[5px] text-white">
             <div className="relative z-[0]">
                 <div className="flex justify-center relative z-[999]">
                     <div className="sliding-text-box w-[110%] z-[999] relative">

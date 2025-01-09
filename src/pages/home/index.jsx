@@ -104,18 +104,41 @@ const Home = () => {
                     transition={{ duration: 0.5 }} className='flex flex-col items-center'>
                     <h2 className="text-6xl font-bold text-red-700">MEMBERSHIP PLANS</h2>
                 </motion.div>
-                    <div className="mt-6 flex flex-wrap gap-2 justify-center space-x-4">
-                        <div className="p-[50px] border rounded-lg " style={{ backgroundImage: "url('src/assets/greyback.jpg')" }}>
-                            <h3 className="text-2xl font-bold">Monthly</h3>
-                            <p className="mt-2 text-red-700 font-medium">$30/month</p>
+                    <div className="mt-6 flex flex-wrap gap-4 lg:gap-2 justify-center space-x-4">
+                        <div className="p-[50px] border rounded-lg hover:scale-105 transition-all" style={{ backgroundImage: "url('src/assets/greyback.jpg')" }}>
+                            <h3 className="text-2xl font-bold">Standard</h3>
+                            <ul className='list-disc text-left font-semibold'>
+                                <li>Includes Membership</li>
+                                <li>Diet Plan Included</li>
+                                <li>Health and Fitness Tips</li>
+                                <li>2 days Gym Access</li>
+                                <li>No Additional Ammenities</li>
+                            </ul>
+                            <p className="mt-2 text-red-700 font-medium">$20/month</p>
                         </div>
-                        <div className="p-[50px] border rounded-lg" style={{ backgroundImage: "url('src/assets/greyback.jpg')" }}>
-                            <h3 className="text-2xl font-bold">Quarterly</h3>
-                            <p className="mt-2 text-red-700 font-medium">$80/3 months</p>
+                        <div className="p-[50px] border rounded-lg hover:scale-105 transition-all" style={{ backgroundImage: "url('src/assets/greyback.jpg')" }}>
+                            <h3 className="text-2xl font-bold">Ultimate</h3>
+                            <ul className='list-disc text-left font-semibold'>
+                                <li>Includes Membership</li>
+                                <li>Access to all gym Facilities</li>
+                                <li>Diet Plan Included</li>
+                                <li>Health and Fitness Tips</li>
+                                <li>Monday-Friday Gym Access</li>
+                                <li>No Additional Ammenities</li>
+                            </ul>
+                            <p className="mt-2 text-red-700 font-medium">$50/month</p>
                         </div>
-                        <div className="p-[50px] border rounded-lg" style={{ backgroundImage: "url('src/assets/greyback.jpg')" }}>
-                            <h3 className="text-2xl font-bold">Yearly</h3>
-                            <p className="mt-2 text-red-700 font-medium">$300/year</p>
+                        <div className="p-[50px] border rounded-lg hover:scale-105 transition-all" style={{ backgroundImage: "url('src/assets/greyback.jpg')" }}>
+                            <h3 className="text-2xl font-bold">Professional</h3>
+                            <ul className='list-disc text-left font-semibold'>
+                                <li>Includes Membership</li>
+                                <li>Access to all gym Facilities</li>
+                                <li>Diet Plan Included</li>
+                                <li>Health and Fitness Tips</li>
+                                <li>Monday-Friday Gym Access</li>
+                                <li>No Additional Ammenities</li>
+                            </ul>
+                            <p className="mt-2 text-red-700 font-medium">$100/month</p>
                         </div>
                     </div>
                 </div>
@@ -140,13 +163,18 @@ const Home = () => {
                         y: inView14 ? 0 : -200,
                     }}
                     transition={{ duration: 0.5 }} className='flex flex-col items-center'>
-                    <h2 className="text-6xl font-bold text-red-700">WHAT OUR CLIENTS HAVE TO SAY</h2>
+                    <h2 className="text-4xl lg:text-6xl font-bold text-red-700">WHAT OUR CLIENTS HAVE TO SAY</h2>
                 </motion.div>
                     <Swiper
                         spaceBetween={30}
                         slidesPerView={1}
                         pagination={{ clickable: true }}
                         className="mt-6"
+                        navigation={{
+                            nextEl: ".custom-next",
+                            prevEl: ".custom-prev",
+                        }}
+                        
                     >
                         <SwiperSlide>
                             <div className="p-6 rounded-lg shadow-lg">
@@ -167,6 +195,7 @@ const Home = () => {
                             </div>
                         </SwiperSlide>
                     </Swiper>
+                    <div className="custom-pagination relative z-[100000000]"></div>
                 </div>
             </section>
            </div>
