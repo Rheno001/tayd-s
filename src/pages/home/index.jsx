@@ -61,7 +61,7 @@ const Home = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-bold">Membership Plans</h2>
                     <div className="mt-6 flex justify-center space-x-4">
-                        <div className="p-[50px] border rounded-lg">
+                        <div className="p-[50px] border rounded-lg ">
                             <h3 className="text-2xl font-bold">Monthly</h3>
                             <p className="mt-2">$30/month</p>
                         </div>

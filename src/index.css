@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+.sliding-text-box {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .sliding-text {
+    animation: slide 20s linear infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
