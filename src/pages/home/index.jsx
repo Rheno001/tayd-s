@@ -35,7 +35,7 @@ const Home = () => {
         threshold: 0.5,
     });
         return (
-        <div className="relative bg-cover bg-center" style={{ backgroundImage: "url('src/pages/home/gym-background.jpg')" }}>
+        <div className="relative bg-cover bg-center" style={{ backgroundImage: "url('/gym-background.jpg')" }}>
             <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-50"></div>
           <div className="flex flex-col items-center justify-center h-screen text-center text-white">
             <div>
@@ -67,7 +67,7 @@ const Home = () => {
                     />
                 </div>
           </div>
-          <div className="relative bg-cover bg-center" style={{ backgroundImage: "url('src/pages/home/backgrey.jpg')" }}>
+          <div className="relative bg-cover bg-center" style={{ backgroundImage: "url('/backgrey.jpg')" }}>
 
             <section className="reason py-8 text-gray-800">
                 <div className="flex flex-col px-16 py-16 items-center justify-center">
@@ -104,7 +104,7 @@ const Home = () => {
                     <h2 className="text-6xl font-bold text-red-700">MEMBERSHIP PLANS</h2>
                 </motion.div>
                     <div className="mt-6 flex flex-wrap gap-4 lg:gap-2 justify-center lg:space-x-4">
-                        <div className="p-[50px] border rounded-lg hover:scale-105 transition-all" style={{ backgroundImage: "url('src/pages/home/greyback.jpg')" }}>
+                        <div className="p-[50px] border rounded-lg hover:scale-105 transition-all" style={{ backgroundImage: "url('/greyback.jpg')" }}>
                             <h3 className="text-2xl font-bold">Standard</h3>
                             <ul className='list-disc text-left font-semibold'>
                                 <li>Includes Membership</li>
@@ -115,7 +115,7 @@ const Home = () => {
                             </ul>
                             <p className="mt-2 text-red-700 font-medium">$20/month</p>
                         </div>
-                        <div className="p-[50px] border rounded-lg hover:scale-105 transition-all" style={{ backgroundImage: "url('src/pages/home/greyback.jpg')" }}>
+                        <div className="p-[50px] border rounded-lg hover:scale-105 transition-all" style={{ backgroundImage: "url('/greyback.jpg')" }}>
                             <h3 className="text-2xl font-bold">Ultimate</h3>
                             <ul className='list-disc text-left font-semibold'>
                                 <li>Includes Membership</li>
@@ -127,7 +127,7 @@ const Home = () => {
                             </ul>
                             <p className="mt-2 text-red-700 font-medium">$50/month</p>
                         </div>
-                        <div className="p-[50px] border rounded-lg hover:scale-105 transition-all" style={{ backgroundImage: "url('src/pages/home/greyback.jpg')" }}>
+                        <div className="p-[50px] border rounded-lg hover:scale-105 transition-all" style={{ backgroundImage: "url('/greyback.jpg')" }}>
                             <h3 className="text-2xl font-bold">Professional</h3>
                             <ul className='list-disc text-left font-semibold'>
                                 <li>Includes Membership</li>
