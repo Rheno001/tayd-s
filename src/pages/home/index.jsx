@@ -35,7 +35,7 @@ const Home = () => {
         threshold: 0.5,
     });
         return (
-        <div className="relative bg-cover bg-center" style={{ backgroundImage: "url('/gym-background.jpg')" }}>
+        <div className="relative lg:bg-cover bg-center" style={{ backgroundImage: "url('/gym-background.jpg')" }}>
             <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-50"></div>
           <div className="flex flex-col items-center justify-center h-screen text-center text-white">
             <div>
@@ -111,9 +111,11 @@ const Home = () => {
                                 <li>Diet Plan Included</li>
                                 <li>Health and Fitness Tips</li>
                                 <li>2 days Gym Access</li>
+                                <li>Access to trainer</li>
                                 <li>No Additional Ammenities</li>
                             </ul>
                             <p className="mt-2 text-red-700 font-medium">$20/month</p>
+                            <button className='bg-red-700 rounded-lg p-[8px] mt-[10px] text-white hover:bg-white hover:text-red-700 hover:scale-95 font-semibold transition-all'>Subscribe</button>
                         </div>
                         <div className="p-[50px] border rounded-lg hover:scale-105 transition-all" style={{ backgroundImage: "url('/greyback.jpg')" }}>
                             <h3 className="text-2xl font-bold">Ultimate</h3>
@@ -126,6 +128,7 @@ const Home = () => {
                                 <li>No Additional Ammenities</li>
                             </ul>
                             <p className="mt-2 text-red-700 font-medium">$50/month</p>
+                            <button className='bg-red-700 rounded-lg p-[8px] mt-[10px] text-white hover:bg-white hover:text-red-700 hover:scale-95 font-semibold transition-all'>Subscribe</button>
                         </div>
                         <div className="p-[50px] border rounded-lg hover:scale-105 transition-all" style={{ backgroundImage: "url('/greyback.jpg')" }}>
                             <h3 className="text-2xl font-bold">Professional</h3>
@@ -138,6 +141,7 @@ const Home = () => {
                                 <li>No Additional Ammenities</li>
                             </ul>
                             <p className="mt-2 text-red-700 font-medium">$100/month</p>
+                            <button className='bg-red-700 rounded-lg p-[8px] mt-[10px] text-white hover:bg-white hover:text-red-700 hover:scale-95 font-semibold transition-all'>Subscribe</button>
                         </div>
                     </div>
                 </div>
