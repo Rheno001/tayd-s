@@ -5,10 +5,6 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Slider from '../../components/slider';
 
-const BackgroundShape = ({ className, style }) => (
-    <div className={`background-shape ${className}`} style={style}></div>
-);
-
 const Home = () => {
     const { ref: ref9, inView: inView9 } = useInView({
         triggerOnce: false,
@@ -92,7 +88,7 @@ const Home = () => {
 
 
                 </div>
-                <section className="py-16 text-gray-800" >
+                <section className="membership py-16 text-gray-800" >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <motion.div ref={ref13}
                     initial={{ opacity: 0, y: -200 }}
