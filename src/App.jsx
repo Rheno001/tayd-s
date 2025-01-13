@@ -9,15 +9,19 @@ import Footer from './components/Footer.jsx'
 
 
 function App() {
-
   return (
-    <div>
-      <Navbar/>
-      <Home/>
-      <Footer/>
-
-    </div>
-  )
+    <>
+        <BrowserRouter>
+            <Nav />
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="/client" element={<Menu />} />
+              <Route path="/instructor" element={<Catering />} />
+            </Routes>
+            <Footer />
+        </BrowserRouter>
+    </>
+  );
 }
 
-export default App
+export default App;
