@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,9 @@ const Navbar = () => {
                 <div className="flex justify-between items-center h-16">
                     <div className="text-2xl font-bold text-red-700">TAYD<span className='text-white'>'</span>S</div>
                     <div className="hidden md:flex space-x-4">
-                        <a href="#" className="text-white hover:text-red-700 transform hover:scale-110 transition-transform duration-200">Home</a>
+                    <Link onClick={handleClick} className='text-white hover:text-red-700 transform hover:scale-110 transition-transform duration-200' to={'/Home'}>
+                    Home
+                </Link>
                         <a href="#" className="text-white hover:text-red-700 transform hover:scale-110 transition-transform duration-200">Membership Plans</a>
                         <a href="#" className="text-white hover:text-red-700 transform hover:scale-110 transition-transform duration-200">Instructors</a>
                         <a href="#" className="text-white hover:text-red-700 transform hover:scale-110 transition-transform duration-200">Contact Us</a>
@@ -31,7 +34,9 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen' : 'max-h-0 overflow-hidden'}`}>
                 <div className="flex flex-col space-y-2 p-4 bg-gradient-to-r from-gray-700 to-gray-900">
-                    <a href="#" className="text-white hover:text-blue-200 transform hover:scale-110 transition-transform duration-200">Home</a>
+                <Link onClick={handleClick} className='text-white hover:text-red-700 transform hover:scale-110 transition-transform duration-200' to={'/Home'}>
+                    Home
+                </Link>
                     <a href="#" className="text-white hover:text-blue-200 transform hover:scale-110 transition-transform duration-200">Membership Plans</a>
                     <a href="#" className="text-white hover:text-blue-200 transform hover:scale-110 transition-transform duration-200">Instructors</a>
                     <a href="#" className="text-white hover:text-blue-200 transform hover:scale-110 transition-transform duration-200">Contact Us</a>
