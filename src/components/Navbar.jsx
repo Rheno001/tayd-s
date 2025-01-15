@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,9 @@ const Navbar = () => {
         <nav className="bg-gradient-to-r from-gray-700 to-gray-900 shadow">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    <div className="text-2xl font-bold text-red-700">TAYD<span className='text-white'>'</span>S</div>
+                    <div className="text-2xl font-bold text-red-700">TAYD<span className='text-white'>&apos;</span>S</div>
                     <div className="hidden md:flex space-x-4">
-                        <Link onClick={handleClick}><a href="#" className="text-white hover:text-red-700 transform hover:scale-110 transition-transform duration-200">Home</a></Link>
+                        <Link><a href="#" className="text-white hover:text-red-700 transform hover:scale-110 transition-transform duration-200">Home</a></Link>
                         <a href="#" className="text-white hover:text-red-700 transform hover:scale-110 transition-transform duration-200">Membership Plans</a>
                         <a href="#" className="text-white hover:text-red-700 transform hover:scale-110 transition-transform duration-200">Instructors</a>
                         <a href="#" className="text-white hover:text-red-700 transform hover:scale-110 transition-transform duration-200">Contact Us</a>
