@@ -9,9 +9,10 @@ import Footer from './components/Footer.jsx'
 
 
 function App() {
+
   return (
-    <>
-        <BrowserRouter>
+    <div>
+       <BrowserRouter>
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
@@ -20,8 +21,9 @@ function App() {
             </Routes>
             <Footer />
         </BrowserRouter>
-    </>
-  );
+
+    </div>
+  )
 }
 
-export default App;
+export default App
